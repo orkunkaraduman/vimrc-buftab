@@ -113,7 +113,11 @@ if (has("termguicolors"))
   set termguicolors
 endif
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme spacegray
+try " try to set colorscheme
+	colorscheme spacegray
+catch /^Vim\%((\a\+)\)\=:E185/
+	" deal with it
+endtry
 
 " Paste
 nnoremap <C-P> :set invpaste paste?<CR>
