@@ -12,5 +12,6 @@ cp -a -f ~/.vim/vimrc ~/.vimrc
 
 # Install plugins
 vim +PluginInstall +qall
+
 ```
 
