@@ -1,6 +1,7 @@
 ## How to Install
 
-```# Clone vimrc-buftab repository
+```sh
+# Clone vimrc-buftab repository
 git clone git@github.com:orkunkaraduman/vimrc-buftab.git  ~/.vim/
 
 # Clone [Vundle](https://github.com/VundleVim/Vundle.vim)
