@@ -53,6 +53,11 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'ap/vim-buftabline'
 
+" Vundle vimrc
+if filereadable("~/.vimrc.vundle")
+	source ~/.vimrc.vundle
+endif
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -109,9 +114,9 @@ set cursorline
 " Theme and Styling 
 syntax on
 set t_Co=256
-if (has("termguicolors"))
-  set termguicolors
-endif
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
 let base16colorspace=256  " Access colors present in 256 colorspace
 try " try to set colorscheme
 	colorscheme spacegray
@@ -132,9 +137,11 @@ nnoremap <Tab> :bnext<CR>
 " NERDTree
 let NERDTreeShowHidden=0
 let NERDTreeWinPos="right"
+nnoremap <C-N> :NERDTreeToggle<CR>
 
 " list chars
 set listchars=tab:\>\.,trail:\.,nbsp:\$
+nnoremap <C-L> :set invlist list?<CR>
 
 " Shortcuts
 nnoremap <F2> :mksession! .vim_session<CR>
@@ -146,8 +153,6 @@ nnoremap <C-X> :bd<CR>
 nnoremap <C-H> :set colorcolumn=0<CR>
 nnoremap <C-J> :set colorcolumn=80<CR>
 nnoremap <C-K> :set invnumber number?<CR>
-nnoremap <C-L> :set invlist list?<CR>
-nnoremap <C-N> :NERDTreeToggle<CR>
 
 " Jump to the last position when reopening a file
 if has("autocmd")
@@ -165,6 +170,6 @@ autocmd Filetype yaml setlocal
 	\ expandtab
 
 " Custom vimrc
-if filereadable("~/.vim/vimrc.custom")
-	source ~/.vim/vimrc.custom
+if filereadable("~/.vimrc.custom")
+	source ~/.vimrc.custom
 endif
