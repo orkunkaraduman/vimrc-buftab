@@ -1,6 +1,5 @@
-## How to Install
+#!/bin/sh
 
-```sh
 # Clone vimrc-buftab
 git clone https://github.com/orkunkaraduman/vimrc-buftab.git  ~/.vim/vimrc-buftab
 
@@ -12,4 +11,3 @@ ln -f ~/.vim/vimrc-buftab/vimrc ~/.vimrc
 
 # Install plugins
 vim +PluginInstall +qall
-```
