@@ -1,2 +1,6 @@
-/bundle/**
-/vimrc.custom
+*.bak
+*.old
+*~
+*.cache
+*.swap
+*.swp
