@@ -55,7 +55,7 @@ Plugin 'ap/vim-buftabline'
 
 " Vundle vimrc
 if filereadable("~/.vimrc.vundle")
-	source ~/.vimrc.vundle
+	source "~/.vimrc.vundle"
 endif
 
 " All of your Plugins must be added before the following line
@@ -171,5 +171,5 @@ autocmd Filetype yaml setlocal
 
 " Custom vimrc
 if filereadable("~/.vimrc.custom")
-	source ~/.vimrc.custom
+	source "~/.vimrc.custom"
 endif
