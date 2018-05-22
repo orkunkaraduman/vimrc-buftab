@@ -97,14 +97,6 @@ set number
 " Show ruler
 set ruler
 
-" Tabs and Indents
-set tabstop=4
-set softtabstop=0
-set shiftwidth=0
-set noexpandtab
-set smarttab
-set autoindent
-
 " Always display the status line
 set laststatus=2
 
@@ -159,15 +151,23 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Tabs and Indents
+set tabstop=4
+"set softtabstop=0
+"set shiftwidth=0
+"set noexpandtab
+"set smarttab
+"set autoindent
+
 " Python
-autocmd Filetype python setlocal
-	\ expandtab
-	\ colorcolumn=80
+"autocmd Filetype python setlocal
+"	\ expandtab
+"	\ colorcolumn=80
 
 " YAML
-autocmd Filetype yaml setlocal
-	\ tabstop=2
-	\ expandtab
+"autocmd Filetype yaml setlocal
+"	\ tabstop=2
+"	\ expandtab
 
 " Custom vimrc
 if filereadable("~/.vimrc.custom")
